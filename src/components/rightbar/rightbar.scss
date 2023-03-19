@@ -1,0 +1,98 @@
+@import"../../app.scss";
+.rightbar{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.rightbar::-webkit-scrollbar{
+  display: none;
+}
+.rightbar{
+    @include themify($themes){
+    flex: 3;
+    position: sticky;
+    top: 71px;
+    height: calc(100vh - 71px);
+    overflow: scroll;
+    background-color: themed("bgSoft");
+    color: themed("textColor");
+    @include mobile{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+    .container{
+        padding: 20px;
+        .item{
+            box-shadow: var(--box-shadow);
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 1px themed("logo");
+            border-style: dashed;
+            background-color: themed("bg");
+            span{
+                color: themed("logo");
+                font-size: 13px;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 10px 0;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    position: relative;
+                    img{
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    p{
+                        color: gray;
+                        font-size: 12px;
+                    }
+                    .online{
+                        width: 9px;
+                        height: 9px;
+                        border-radius: 50%;
+                        background-color: limegreen;
+                        position: absolute;
+                        top: 0;
+                        left: 18px;
+                    }
+                    span{
+                        color: themed("textColor");
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
+                span{
+                    font-size: 11px;
+                }
+                .buttons{
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    button{
+                        border: none;
+                        padding: 5px;
+                        color: white;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        &:first-child{
+                            background-color: rebeccapurple;
+                        }
+                        &:last-child{
+                            background-color: #f0544f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+}

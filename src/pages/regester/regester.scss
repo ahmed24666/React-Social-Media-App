@@ -1,0 +1,185 @@
+.regester{ 
+    height: 100vh;
+    background-color: rgb(193, 190, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card{
+        display: flex;
+        background-color: #fff;
+        width: 50%;
+        border-radius: 10px;
+        min-height: 500px;
+        overflow: hidden;
+
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+            url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+              center;
+            background-size: cover;
+            padding: 30px;
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+            color: white;
+
+            h1{
+                font-size: 80px;
+                line-height: 100px;
+            }
+            p{
+                font-size: 15px;
+            }
+            span{
+                font-size: 13px;
+            }
+            button{
+                width: 50%;
+                padding: 10px;
+                border: 2px solid white;
+                background-color: white;
+                color: rebeccapurple;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.5s;
+            }
+            button:hover{
+                border: 2px solid white;
+                background-color: rebeccapurple;
+                color:white ;
+            }
+            
+        }
+        .right{
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            flex-direction: column; 
+            gap: 20px;
+            color: black;
+            justify-content: center;
+
+            h1{
+                color: #555;
+
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                    
+                }
+                input:focus{
+                    outline: none;
+                    caret-color: rebeccapurple;
+                    color: rebeccapurple;
+                    border-bottom: 1px solid rebeccapurple;
+                }
+                button{
+                    width: 50%;
+                    padding: 10px;
+                    border: 2px solid rebeccapurple;
+                    background-color: rebeccapurple;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: 0.5s;
+                }
+                button:hover{
+                    border: 2px solid rebeccapurple;
+                    background-color: white;
+                    color:rebeccapurple ;
+                }
+            }
+        }
+    } 
+}
+@media (max-width: 1150px){
+    .regester{
+        .card{
+            flex-direction: column;
+            
+            .left{
+                text-align: center;
+                gap: 15px;
+                padding:20px 50px;
+                h1{
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+                button{
+                    width: 40%;
+                }
+            }
+            .right{
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                padding:20px 50px;
+                
+                form{
+                    gap: 10px;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 300px;
+                        padding: 10px;
+                    }
+                    button{
+                        margin-top: 10px;
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 850px){
+    .regester{
+        
+        .card{
+            width: 90%;
+        }
+    }
+}
+@media (max-width: 450px){
+    .regester{
+        .card{
+            .left{
+                gap: 15px;
+                padding:15px 50px;
+                button{
+                    width: 40%;
+                }
+                h1{
+                    font-size: 35px;
+                }
+            }
+            .right{
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10px;
+                
+                form{
+                    gap: 5px;
+                    justify-content: center;
+                    align-items: center;
+                    input{
+                        width: 200px;
+                    }
+                    button{
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

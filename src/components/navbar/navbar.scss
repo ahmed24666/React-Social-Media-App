@@ -1,0 +1,93 @@
+@import"../../app.scss";
+.navbar{
+    @include themify($themes){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 50px;
+    border-bottom: 1px solid rebeccapurple;
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color: themed("textColor");
+    z-index: 999;
+    @include mobile{
+        justify-content: center;
+        
+    }
+    
+
+    .left{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include mobile{
+            gap: 30px;
+        }
+        @include tablet{
+            gap: 30px;
+        }
+        
+        span{
+            font-weight: bold;
+            font-size: 22px;
+            color: themed("logo");
+            font-family: var(--secodary-font);
+            
+        }
+        .search{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rebeccapurple;
+            border-radius: 5px;
+            padding: 5px;
+            
+            @include mobile{
+                display: none;
+            }
+            input{
+                border: none;
+                width: 400px;
+                background-color: themed("bg");
+                @include tablet{
+                    width: 150px;
+                }
+            }
+            input::placeholder{
+                color: themed("logo");
+            }
+            input:focus{
+                outline: none;
+                caret-color: rebeccapurple;
+                color: themed("logo");
+            }
+        }
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include mobile{
+            display: none;
+        }
+        @include tablet{
+            display: none;
+        }
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            
+        }
+    }
+}
+}

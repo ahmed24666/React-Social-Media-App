@@ -1,0 +1,68 @@
+@import "../../app.scss";
+.post{
+    @include themify($themes){
+        box-shadow: var(--box-shadow);
+        border-radius: 10px;
+        background-color: themed("bg");
+        
+    .container{
+        padding: 15px;
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+    
+            .item {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              cursor: pointer;
+              font-size: 12px;
+              color:themed("textColor")
+
+            }
+          }
+        .content{
+            margin: 15px 0;
+            p{
+                color:themed("textColor");
+                font-size: 15px;
+            }
+            img{
+                width: 100%;
+                max-height: 450px;
+                object-fit: cover;
+                margin-top: 15px;
+            }
+        }
+        .user{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .userInfo{
+                display: flex;
+                gap: 15px;
+                img{
+                    width: 25px;
+                    height: 25px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+                .details{
+                    display: flex;
+                    flex-direction: column;
+                    .name{
+                        font-size: 13px;
+                        font-weight: 500;
+                        color: themed("textColor");
+                    }
+                    .date{
+                        font-size: 11px;
+                        color: themed("textColorSoft");
+                    } 
+                }
+            }
+        }
+    }
+}
+}

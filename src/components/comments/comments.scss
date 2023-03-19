@@ -1,0 +1,87 @@
+@import "../../app.scss";
+
+.comments {
+  @include themify($themes) {
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+  }
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .write{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 15px 0px;
+
+        input{
+            border: none;
+            width: 50%;
+            background-color: themed("bg");
+            padding: 10px 20px;
+            border-bottom: 1px solid themed("border");
+            border-radius: 5px;
+            @include mobile{
+              
+          }
+        }
+        input::placeholder{
+            color: themed("logo");
+        }
+        input:focus{
+            outline: none;
+            caret-color: rebeccapurple;
+            color: themed("logo");
+            border: 1px solid themed("border");
+        }
+
+        button{
+            border: none;
+            background-color: rebeccapurple;
+            color: white;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+    }
+
+    .comment {
+      margin: 30px 0px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      .info {
+        flex:5;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        align-items: flex-start;
+
+        span {
+          font-weight: 500;
+          font-size: 14px;
+          color:themed("textColor");
+        }
+
+        p{
+          color:themed("textColor");
+          font-size: 13px;
+        }
+      }
+
+      .date{
+        flex:1;
+        align-self: center;
+        color: themed("textColorSoft");
+        font-size: 12px;
+      }
+    }
+  }
+}
